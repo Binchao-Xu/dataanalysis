@@ -9,7 +9,7 @@ st.title("畅销款")
 ## 准备到款数据
 @st.cache_data  # 加载数据优化
 def cache_data():
-    product_tb = pd.read_csv(r"D:\edge浏览器下载\货品基础数据.csv",encoding="gbk")
+    product_tb = pd.read_csv(r"货品基础数据.csv",encoding="gbk")
     product_tb["品牌_品类"] = product_tb["品牌"] + product_tb["品类"]
     cat_sale = product_tb[product_tb["品类三级"]=="服装"].groupby(["品牌","品类"])["全渠道近15天销量"].sum().reset_index()
     cat_sellout = cat_sale.groupby("品牌",group_keys=False).apply(lambda x: x.nlargest(10,"全渠道近15天销量"))
@@ -21,11 +21,11 @@ def cache_data():
                  ].sort_values(by=["全渠道近15天销量"],ascending=False).reset_index(drop=True)
 
     ## 准备到色数据
-    product_tb_skc = pd.read_csv(r"D:\edge浏览器下载\①各渠道销售库存到货数据1121.csv",encoding="gbk")
+    product_tb_skc = pd.read_csv("①各渠道销售库存到货数据1121.csv",encoding="gbk")
     product_tb_skc["23年零售数量"] = product_tb_skc["23年零售数量"].fillna(0).astype(int)
 
     ## 准备近货品15日每日销售数据
-    sale_15Day_data = pd.read_csv(r"D:\edge浏览器下载\15日销售.csv",encoding="gbk")
+    sale_15Day_data = pd.read_csv("15日销售.csv",encoding="gbk")
     sale_15Day_data["核销日期"] = pd.to_datetime(sale_15Day_data["核销日期"])
     sale_15Day_data = sale_15Day_data.sort_values(by=["核销日期"],ascending=True).reset_index()
     return product_tb,sellout_tb,cat_sale,product_tb_skc,sale_15Day_data
@@ -91,7 +91,7 @@ def main():
     # 展示图片
     col_1,col_2,col_3,col_4,col_5= st.columns([1,1,1,1,1])
     # 图片地址
-    img_path = r"\\WZY\wzy\图\款式汇总图（非高清-较全）_压缩版\\"
+    img_path = "图\款式汇总图（非高清-较全）_压缩版\\"
 
     with col_1:
         try:
