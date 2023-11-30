@@ -121,4 +121,3 @@ wsproto==1.2.0
 xlrd==1.2.0
 yarg==0.1.9
 zipp==3.17.0
-chinese_calendar==23.3.1
