@@ -57,7 +57,7 @@ def main():
     font_path = "SimSun.ttf"
     font_prop = FontProperties(fname=font_path, size=12)
     fig = plt.figure()
-    plt.barh(y=barh_data["品类"],width=barh_data["全渠道近15天销量"],height=0.5, fontproperties=font_prop)
+    plt.barh(y=barh_data["品类"],width=barh_data["全渠道近15天销量"],height=0.5)
     plt.yticks(fontsize=10, fontproperties=font_prop)
     plt.title(f"{selectbox_1}各品类近15天销量", fontproperties=font_prop)
     for index, value in enumerate(barh_data["全渠道近15天销量"]):
