@@ -3,6 +3,7 @@ import streamlit as st
 import pandas as pd
 import os
 from chinese_calendar import is_workday
+from matplotlib.font_manager import FontProperties    
 
 st.title("畅销款")
 
@@ -53,11 +54,12 @@ def main():
                         &(cat_sale["全渠道近15天销量"]>=0)].sort_values(by="全渠道近15天销量",ascending=True).tail(10)
 
     # 解决中文乱码
-    plt.rcParams['font.family'] = 'SimSun'
+    font_path = "SimSun.ttf"
+    font_prop = FontProperties(fname=font_path, size=12)
     fig = plt.figure()
     plt.barh(y=barh_data["品类"],width=barh_data["全渠道近15天销量"],height=0.5)
     plt.yticks(fontsize=10)
-    plt.title(f"{selectbox_1}各品类近15天销量")
+    plt.title(f"{selectbox_1}各品类近15天销量", fontproperties=font_prop)
     for index, value in enumerate(barh_data["全渠道近15天销量"]):
         plt.text(value, index-0.1, str(value))
 
