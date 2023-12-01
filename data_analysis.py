@@ -53,7 +53,7 @@ def main():
                         &(cat_sale["全渠道近15天销量"]>=0)].sort_values(by="全渠道近15天销量",ascending=True).tail(10)
 
     # 解决中文乱码
-    plt.rcParams['font.family'] = 'Microsoft YaHei, SimSun, Arial, sans-serif'
+    plt.rcParams['font.family'] = '宋体'
     fig = plt.figure()
     plt.barh(y=barh_data["品类"],width=barh_data["全渠道近15天销量"],height=0.5)
     plt.yticks(fontsize=10)
