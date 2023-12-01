@@ -99,8 +99,8 @@ def main():
             st.text(f"{str(obj)}")
 
             if len(str(obj)) > 1:
-                img_obj = img_path + obj + ".jpg"
-                img_obj_2 = img_path + obj+ ".png"
+                img_obj = obj + ".jpg"
+                img_obj_2 =  obj+ ".png"
 
             if os.path.exists(img_obj):
                 st.image(img_obj)
@@ -154,8 +154,8 @@ def main():
             obj = list(show_data_1["货品编号"])[1]
             st.text(f"{str(obj)}")
             if len(str(obj)) > 1:
-                img_obj = img_path + str(obj).strip() + ".jpg"
-                img_obj_2 = img_path + str(obj).strip()+ ".png"
+                img_obj = str(obj).strip() + ".jpg"
+                img_obj_2 = str(obj).strip()+ ".png"
 
             if os.path.exists(img_obj):
                 st.image(img_obj)
@@ -180,8 +180,8 @@ def main():
             st.text(f"{str(obj)}")
 
             if len(str(obj)) > 1:
-                img_obj = img_path + obj + ".jpg"
-                img_obj_2 = img_path + obj+ ".png"
+                img_obj = obj + ".jpg"
+                img_obj_2 = obj+ ".png"
 
             if os.path.exists(img_obj):
                 st.image(img_obj)
@@ -199,8 +199,8 @@ def main():
             st.text(f"{str(obj)}")
 
             if len(obj) > 1:
-                img_obj = img_path + obj + ".jpg"
-                img_obj_2 = img_path + obj+ ".png"
+                img_obj = obj + ".jpg"
+                img_obj_2 = obj+ ".png"
 
             if os.path.exists(img_obj):
                 st.image(img_obj)
@@ -218,8 +218,8 @@ def main():
             st.text(f"{str(obj)}")
 
             if len(obj) > 1:
-                img_obj = img_path + obj + ".jpg"
-                img_obj_2 = img_path + obj+ ".png"
+                img_obj = obj + ".jpg"
+                img_obj_2 = obj+ ".png"
 
             if os.path.exists(img_obj):
                 st.image(img_obj)
