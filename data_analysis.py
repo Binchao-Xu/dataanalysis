@@ -137,7 +137,7 @@ def main():
             ax.plot(this_product_id["核销日期"],this_product_id["数量"],linewidth=2,label='销量',color='green')
             ax.bar(this_product_id["核销日期"],this_product_id["周末"],width=1,color="lavender",label='节假日')
             plt.xticks(rotation=45,fontsize=5)
-            plt.title(f"近15日 {obj} 销售曲线")
+            plt.title(f"近15日 {obj} 销售曲线", fontproperties=font_prop)
 
             # 添加数据标签
             for index, value in enumerate(this_product_id["数量"]):
