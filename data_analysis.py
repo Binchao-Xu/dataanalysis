@@ -94,7 +94,7 @@ def main():
     # 展示图片
     col_1,col_2,col_3,col_4,col_5= st.columns([1,1,1,1,1])
     # 图片地址
-    img_path = "图\款式汇总图（非高清-较全）_压缩版\\"
+    img_path = "图片\"
 
     with col_1:
         try:
@@ -102,8 +102,8 @@ def main():
             st.text(f"{str(obj)}")
 
             if len(str(obj)) > 1:
-                img_obj = obj + ".jpg"
-                img_obj_2 =  obj+ ".png"
+                img_obj = img_path + obj + ".jpg"
+                img_obj_2 = img_path + obj+ ".png"
 
             if os.path.exists(img_obj):
                 st.image(img_obj)
@@ -157,8 +157,8 @@ def main():
             obj = list(show_data_1["货品编号"])[1]
             st.text(f"{str(obj)}")
             if len(str(obj)) > 1:
-                img_obj = str(obj).strip() + ".jpg"
-                img_obj_2 = str(obj).strip()+ ".png"
+                img_obj = img_path + str(obj).strip() + ".jpg"
+                img_obj_2 = img_path + str(obj).strip()+ ".png"
 
             if os.path.exists(img_obj):
                 st.image(img_obj)
@@ -183,8 +183,8 @@ def main():
             st.text(f"{str(obj)}")
 
             if len(str(obj)) > 1:
-                img_obj = obj + ".jpg"
-                img_obj_2 = obj+ ".png"
+                img_obj = img_path + obj + ".jpg"
+                img_obj_2 = img_path + obj+ ".png"
 
             if os.path.exists(img_obj):
                 st.image(img_obj)
@@ -202,8 +202,8 @@ def main():
             st.text(f"{str(obj)}")
 
             if len(obj) > 1:
-                img_obj = obj + ".jpg"
-                img_obj_2 = obj+ ".png"
+                img_obj = img_path +obj + ".jpg"
+                img_obj_2 = img_path + obj+ ".png"
 
             if os.path.exists(img_obj):
                 st.image(img_obj)
@@ -221,8 +221,8 @@ def main():
             st.text(f"{str(obj)}")
 
             if len(obj) > 1:
-                img_obj = obj + ".jpg"
-                img_obj_2 = obj+ ".png"
+                img_obj = img_path + obj + ".jpg"
+                img_obj_2 = img_path + obj+ ".png"
 
             if os.path.exists(img_obj):
                 st.image(img_obj)
