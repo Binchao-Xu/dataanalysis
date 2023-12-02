@@ -94,7 +94,7 @@ def main():
     # 展示图片
     col_1,col_2,col_3,col_4,col_5= st.columns([1,1,1,1,1])
     # 图片地址
-    img_path = r"图片\\"
+    img_path = "图片/"
 
     with col_1:
         try:
